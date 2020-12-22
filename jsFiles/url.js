@@ -1,8 +1,7 @@
+
 import {fetchMyData,postOrder} from './data.js'
-
-import {indexFull, catalogFull,catalogOneFull,actionOneFull, oneProductFull, basketFull, incertElementInPlace,
-incertElement,onReady,banerstep,orderFull, moveImg} from './animation.js'
-
+import {indexFull, catalogFull,catalogOneFull,actionOneFull,oneProductFull,basketFull, incertElementInPlace,
+    incertElement,onReady,banerstep,orderFull, moveImg} from './animation.js'
 const body=document.getElementById('body');
 const upMenu=document.getElementsByClassName('upperMenu')[0];
 let db1;
@@ -16,7 +15,6 @@ onReady(function() {
     document.getElementsByClassName('container')[0].style.display='block' 
     document.getElementsByClassName('footer')[0].style.display='flex' 
 });
-
 class screanRender{
     constructor(container, db, siteUrl){
         this.container = container;
@@ -28,7 +26,7 @@ class screanRender{
     renderScreen() {
         switch(this.siteUrl[0]){
             case '#catalog':{if(this.hashId!=-1){
-                    if (this.hashId>=0 && this.hashId < this.db.Category.length)
+                    if (this.hashId>=0 && this.hashId<this.db.category.length)
                         catalogOneFull(this.container, this.db, this.hashId);
                     else  window.location.hash = ''
                 }
@@ -40,7 +38,7 @@ class screanRender{
                 else  window.location.hash = ''
                 break;
             }
-            case '#oneBookPage':{if (this.hashId>=0 && this.hashId<this.db.products.length)
+            case '#oneProductPage':{if (this.hashId>=0 && this.hashId<this.db.products.length)
                     oneProductFull(this.container, this.db, this.hashId);
                 else  window.location.hash = ''
                 break;
@@ -54,7 +52,6 @@ class screanRender{
         }
     }
 }
-
 class Order{
     constructor(textArea, orderList){
         this.phoneNumber=textArea[0].value;
@@ -290,3 +287,4 @@ window.onload = async function (){
 }
 
 window.onhashchange = function (){location.reload()}
+

@@ -15,7 +15,6 @@ hyml, body{
     background: linear-gradient(#081e24, #1b6e68, #081e24);
     border-radius: 2px;
 }
-
 #loading{
     width: 20vmin;
     height:20vmin;
@@ -27,7 +26,6 @@ hyml, body{
     background-color: #e2946700;
     z-index: 1013;
 }
-
 #resultBaner{
     position: absolute;
     width: 40vmin;
@@ -75,7 +73,6 @@ hyml, body{
         border: 10px dotted #e29467;
     }
 }
-
 /*e29467 - оранжевий
 dee3e9 - сірий білий
 72bf9e - світло берюза
@@ -172,7 +169,6 @@ dee3e9 - сірий білий
 .oneOpt:hover{
     background-color: #e2946766;
 }
-
 .shopBasket{
     flex: 0.5;
     min-height: 30px;
